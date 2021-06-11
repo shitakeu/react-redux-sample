@@ -1,11 +1,11 @@
 import { createStore } from "redux";
-import reducer from "./reducer";
+import rootReducers from "./reducers";
 import { Provider } from "react-redux";
 import { render } from "react-dom";
 import React from "react";
-import App from "./App";
+import App from "./containers/Container";
 
-const store = createStore(reducer);
+const store = createStore(rootReducers);
 
 console.log(store);
 store.subscribe(() => {

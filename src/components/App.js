@@ -1,4 +1,4 @@
-const App = ({ number, day, title, plus, minus }) => (
+const App = ({ number, day, title, plus, minus, asyncMinus, getJson }) => (
   <div>
     <h2
       onClick={() => {
@@ -22,6 +22,22 @@ const App = ({ number, day, title, plus, minus }) => (
     >
       {" "}
       -10{" "}
+    </button>
+    <button
+      onClick={() => {
+        asyncMinus(10);
+      }}
+    >
+      {" "}
+      async -10{" "}
+    </button>
+    <button
+      onClick={() => {
+        getJson();
+      }}
+    >
+      {" "}
+      getJson{" "}
     </button>
   </div>
 );
